@@ -62,7 +62,7 @@ contract DemoMapping{
      }
 
      function vote(address _candidate, uint count) public checkNoExist(_candidate){
-          Voter memory v = voters[msg.sender];
+          Voter storage v = voters[msg.sender];
           require(count <= maxVote, "invalid vote");
           v._candidate = _candidate;
           v.voteCount = count;
