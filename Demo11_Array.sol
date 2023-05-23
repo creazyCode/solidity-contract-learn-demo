@@ -61,6 +61,8 @@ contract ArrayRemove {
     }
 }
 
+//删除数组某一个元素
+//将数组末尾的元素替换到要删除的index，然后pop()
 contract ArrayRemoveFromEnd {
     uint[] public arr;
 
