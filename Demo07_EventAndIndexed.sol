@@ -31,3 +31,21 @@ contract EventIndexed {
 
      }
 }
+
+contract DemoEvent{
+
+    event Log(address indexed sender, string message);
+
+    event Log2();
+
+    function test() public {
+
+        emit Log(msg.sender, "Msg From Log");
+
+        emit Log(msg.sender, "Msg From Log 2s");
+
+        emit Log2();
+    }
+
+}
+
