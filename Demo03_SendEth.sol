@@ -9,8 +9,13 @@ pragma solidity ^0.8.14;
 /*
 * example from https://solidity-by-example.org/sending-ether/
 */
-contract ReceiveEth {
+//receive 和 fallback：两个都是回调function，主要在两种情况下被使用：
+//1.接受eth
+//2.处理合约中不存在的函数调用(代理合约 proxy contract)
 
+//
+contract ReceiveEth {
+     //两者都能被用于接受eth，触发规则如下：
      /**
      *        if(msg.data is empty)?
      *          /yes            \no
