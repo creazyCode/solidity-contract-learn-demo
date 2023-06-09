@@ -8,6 +8,10 @@ pragma solidity ^0.8.14;
 //fallback
 //声明：fallback() external payable {...}
 //合约中没有任何匹配的函数可调用时：调用fallback， 最多含有一个fallback, payable是可选关键字，取决于是否需要接受eth，允许modifier
+
+//Fallback函数和Revice函数的区别：
+//Recevice函数只在合约转账时调用，
+//而Fallback函数除了可以在合约转账时调用外，在合约没有函数匹配或需要像合约发送附加数据时，也调用
 contract Test{
 
     event f1(string _a);
