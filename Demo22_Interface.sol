@@ -7,13 +7,16 @@ pragma solidity ^0.8.14;
 //不能实例化一个interface
 //不能实现接口中的方法
 //接口中的所有方法必须定义为外部方法
+//接口可以继承
 contract Counter {
+    //这里count 为public属性，有默认的count()方法
     uint public count;
 
     function increment() external{
         count += 1;
     }
 }
+
 
 interface ICounter {
     
@@ -22,8 +25,9 @@ interface ICounter {
     function increment() external ;
 }
 
+//Counter实现了count()和increment()方法
 contract MyCounter{
-    
+    //通过传入实现接口的合约地址，调用接口函数
     function incrementCounter(address _counter) external {
         ICounter(_counter).increment();
     }

@@ -5,6 +5,7 @@ contract DemoTest{
     
 }
 
+//被payable关键字声明的（address或者function），可以接受eth，即发送交易时传入value。
 contract DemoPayable {
 
     //这里owner用payable声明，可以用于接收eth
