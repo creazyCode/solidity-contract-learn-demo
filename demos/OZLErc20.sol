@@ -6,8 +6,6 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 //使用openzeppelin官方库的erc20标准实现erc20 token
 contract OpenZeppeLinErc20 is ERC20 {
 
-
-     
     constructor (string memory _name, string memory _symbol) ERC20(_name,_symbol){
         _mint(msg.sender, 100 * 10 ** (decimals()));
     }
