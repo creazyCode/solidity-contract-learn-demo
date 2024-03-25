@@ -6,6 +6,10 @@ contract DemoTest{
 }
 
 //被payable关键字声明的（address或者function），可以接受eth，即发送交易时传入value。
+//声明地址 address payable ：
+//          代表该地址可以接受以太币
+//          开发时需要认真考虑一个地址是否需要接受eth，即是否需要用payable声明。
+//          如果一个地址没有声明payable，且向该地址转入eth时，会导致编译类型错误
 contract DemoPayable {
 
     //这里owner用payable声明，可以用于接收eth
